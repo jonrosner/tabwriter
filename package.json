@@ -1,15 +1,17 @@
 {
   "name": "tabwriter",
   "version": "1.0.0",
-  "description": "Creates tabs from note-objects",
+  "description": "Creates guitar tabs from JavaScript objects",
   "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
   "keywords": [
     "guitar",
     "tab"
   ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/joroGER/tabwriter"
+  },
   "author": "Jonathan Roesner",
+  "email": "john4rrr@yahoo.de",
   "license": "MIT"
 }

@@ -33,9 +33,9 @@ const notes = [
 ## Usage
 
 ```js
-var tabwriter = require('tabwriter');
+var createTab = require('tabwriter');
 
-tabwriter.createTab(notes)
+createTab(notes)
 /*
 [ 'e|-------|',
   'B|-------|',

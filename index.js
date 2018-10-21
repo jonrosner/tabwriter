@@ -32,6 +32,4 @@ const createTab = (notes) => {
     return tab.reverse()
 }
 
-module.exports = {
-    createTab: createTab
-};
+module.exports = createTab
