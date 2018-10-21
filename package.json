@@ -1,0 +1,15 @@
+{
+  "name": "tabwriter",
+  "version": "1.0.0",
+  "description": "Creates tabs from note-objects",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "guitar",
+    "tab"
+  ],
+  "author": "Jonathan Roesner",
+  "license": "MIT"
+}
