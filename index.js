@@ -1,4 +1,8 @@
 const createTab = (notes) => {
+    if (notes.length == 0) {
+        return []
+    }
+    
     const tab = [
         'E|--',
         'A|--',

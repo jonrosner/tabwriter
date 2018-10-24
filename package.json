@@ -1,6 +1,6 @@
 {
   "name": "tabwriter",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Creates guitar tabs from JavaScript objects",
   "main": "index.js",
   "keywords": [
