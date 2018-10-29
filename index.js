@@ -14,20 +14,30 @@ const createTab = (notes) => {
 
     const maxBeat = Math.max.apply(Math, notes.map(x => x.beat))
 
-    tab.map((_, i) => {
-        tab[i] += ('--'.repeat(maxBeat))
-    })
-
-    notes.map(x => {
-        if (x.fret >= 0 &&
-            x.string >= 0 &&
-            x.string <= tab.length && 
-            x.beat > 0) {
-            const i = 2 + x.beat * 2
-            let newString = tab[x.string].substr(0, i) + x.fret.toString() + tab[x.string].substr(i+1)
-            tab[x.string] = newString
+    for(var i = 1; i <= maxBeat; i++) {
+        let notesAtBeat = notes.slice(0).filter((x) => x.beat == i)
+        if (notesAtBeat.length == 0) {
+            tab.map((x, i) => {
+                const newString = x + '--'
+                tab[i] = newString
+            })
+            continue
         }
-    })
+        notesAtBeat.map(x => {
+            if (x.fret >= 0 &&
+                    x.string >= 0 &&
+                    x.string <= tab.length) {
+                let newString = ''
+                newString = tab[x.string] + x.fret.toString() + '-'
+                tab[x.string] = newString
+                }
+        })
+        const l = Math.max.apply(Math, tab.map(x => x.length))
+        tab.map((x, i) => {
+            const newString = x + '-'.repeat(l - x.length)
+            tab[i] = newString
+        })
+    }
 
     tab.map((_, i) => {
         tab[i] += ('-|')
